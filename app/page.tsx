@@ -12,7 +12,7 @@ export default function Home() {
       <main className="px-24">
         {/* top */}
         <div className="flex items-end justify-between my-3.5">
-          <a>Easy no.1</a>
+          <a>Easy 01</a>
           <button className="bg-[#255AB4] px-4 py-2.5 rounded-md">Reset</button>
         </div>
         <div className="flex justify-between">
