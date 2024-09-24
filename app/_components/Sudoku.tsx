@@ -194,11 +194,11 @@ export default function Sudoku() {
               value={cell === 0 ? '' : cell}
               onChange={(e) => handleChange(rowIndex, colIndex, e.target.value)}
               onClick={() => setSelectedCell({ row: rowIndex, col: colIndex })}
-              className={`grid-cell border border-black hover:border-blue-700 w-[4.17rem] h-[4.17rem] text-center text-lg ${isDuplicate ? 'border-red-500' : 'border-gray-300'} ${rowIndex % SUBGRID_SIZE === 0 && colIndex % SUBGRID_SIZE === 0 ? 'border-t-2 border-l-2' : ''} ${rowIndex % SUBGRID_SIZE === 2 ? 'border-b-2' : ''} ${colIndex % SUBGRID_SIZE === 2 ? 'border-r-2' : ''}`}
+              className={`grid-cell border cursor-pointer caret-transparent border-black hover:border-blue-700 w-[4.17rem] h-[4.17rem] text-center text-lg ${isDuplicate ? 'border-red-500' : 'border-gray-300'} ${rowIndex % SUBGRID_SIZE === 0 && colIndex % SUBGRID_SIZE === 0 ? 'border-t-2 border-l-2' : ''} ${rowIndex % SUBGRID_SIZE === 2 ? 'border-b-2' : ''} ${colIndex % SUBGRID_SIZE === 2 ? 'border-r-2' : ''}`}
               style={{
                 outline: 'none', // 포커스 시 outline 제거
                 color: isDuplicate ? 'red' : 'black', // 틀린 부분은 빨강, 나머지는 검정
-                backgroundColor: cell === 0 ? 'white' : (isUserInput ? 'lightgray' : 'white') // 기존 숫자는 흰색, 사용자 입력 숫자는 회색
+                backgroundColor: cell === 0 ? 'white' : (isUserInput ? 'lightgray' : 'white') // 기존 숫자 배경은 흰색, 사용자 입력 숫자는 회색
               }}
             />
           );
@@ -206,19 +206,17 @@ export default function Sudoku() {
       </div>
     ));
   };
-  
 
+  // 숫자 버튼 입력
   const renderNumberButtons = () => {
     return (
-      <div className="my-2">
+      <div className="grid grid-cols-3 gap-2">
         {[...Array(9)].map((_, index) => (
-          <button
+          <Button
             key={index}
-            onClick={() => handleNumberClick(index + 1)}
-            className="w-8 h-8 m-1 text-lg"
-          >
-            {index + 1}
-          </button>
+            buttonName={`${index + 1}`}
+            onClick={() => handleNumberClick(index + 1)} // 버튼 클릭 시 이벤트 처리
+          />
         ))}
       </div>
     );
