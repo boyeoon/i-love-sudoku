@@ -194,11 +194,10 @@ export default function Sudoku() {
               value={cell === 0 ? '' : cell}
               onChange={(e) => handleChange(rowIndex, colIndex, e.target.value)}
               onClick={() => setSelectedCell({ row: rowIndex, col: colIndex })}
-              className={`grid-cell border cursor-pointer caret-transparent border-black hover:border-blue-700 w-[4.17rem] h-[4.17rem] text-center text-lg ${isDuplicate ? 'border-red-500' : 'border-gray-300'} ${rowIndex % SUBGRID_SIZE === 0 && colIndex % SUBGRID_SIZE === 0 ? 'border-t-2 border-l-2' : ''} ${rowIndex % SUBGRID_SIZE === 2 ? 'border-b-2' : ''} ${colIndex % SUBGRID_SIZE === 2 ? 'border-r-2' : ''}`}
+              className={`grid-cell border cursor-pointer caret-transparent border-black hover:border-blue-700 w-[4.17rem] h-[4.17rem] text-center text-lg ${isDuplicate ? 'border-red-500' : 'border-gray-300'} ${rowIndex % SUBGRID_SIZE === 0 && colIndex % SUBGRID_SIZE === 0 ? 'border-t-2 border-l-2' : ''} ${rowIndex % SUBGRID_SIZE === 2 ? 'border-b-2' : ''} ${colIndex % SUBGRID_SIZE === 2 ? 'border-r-2' : ''} ${cell === 0 ? 'bg-white' : (isUserInput ? 'bg-gray-300' : 'bg-white')} hover:bg-blue-500`} // hover 시 배경색 파란색
               style={{
                 outline: 'none', // 포커스 시 outline 제거
                 color: isDuplicate ? 'red' : 'black', // 틀린 부분은 빨강, 나머지는 검정
-                backgroundColor: cell === 0 ? 'white' : (isUserInput ? 'lightgray' : 'white') // 기존 숫자 배경은 흰색, 사용자 입력 숫자는 회색
               }}
             />
           );
