@@ -236,8 +236,12 @@ export default function Sudoku() {
 
   const handleCloseModal = () => {
     setIsSolved(false);
-    const newBoard = generateSudoku();
-    setBoard(newBoard);
+    // 스도쿠 퍼즐 목록 가져오기
+    const puzzles = getSudokuPuzzles();
+    // 랜덤 퍼즐 인덱스 선택
+    const randomIndex = Math.floor(Math.random() * puzzles.length);
+    const newBoard = puzzles[randomIndex]; // 랜덤 문제 선택
+    setBoard(newBoard); // 새 보드 설정
     setOriginalBoard(newBoard.map(row => [...row])); // 새 원본 보드 저장
   };
 
