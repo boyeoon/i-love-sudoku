@@ -1,5 +1,5 @@
 # I LOVE SUDOKU
-the website is currently hosted at [www.example.com](www.example.com)
+the website is currently hosted at [i-love-sudoku](i-love-sudoku.vercel.app)
 
 사진
 
