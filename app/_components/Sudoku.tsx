@@ -55,19 +55,19 @@ const solveSudoku = (board: number[][]): boolean => {
 };
 
 // 스도쿠 퍼즐을 생성하는 함수
-const generateSudoku = () => {
-  const board = generateEmptyBoard();
-  for (let i = 0; i < SIZE; i++) {
-    for (let j = 0; j < SIZE; j++) {
-      const num = Math.floor(Math.random() * SIZE) + 1;
-      if (isSafe(board, i, j, num)) {
-        board[i][j] = num;
-      }
-    }
-  }
-  solveSudoku(board);
-  return board;
-};
+// const generateSudoku = () => {
+//   const board = generateEmptyBoard();
+//   for (let i = 0; i < SIZE; i++) {
+//     for (let j = 0; j < SIZE; j++) {
+//       const num = Math.floor(Math.random() * SIZE) + 1;
+//       if (isSafe(board, i, j, num)) {
+//         board[i][j] = num;
+//       }
+//     }
+//   }
+//   solveSudoku(board);
+//   return board;
+// };
 
 // 스도쿠 보드의 유효성을 검사
 const isValidBoard = (board: number[][]): boolean => {
