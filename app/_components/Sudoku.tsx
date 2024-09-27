@@ -10,9 +10,6 @@ const SIZE = 9;
 // 서브 그리드의 3x3 크기
 const SUBGRID_SIZE = 3;
 
-// 빈 스도쿠 보드 생성
-const generateEmptyBoard = () => Array(SIZE).fill(null).map(() => Array(SIZE).fill(0));
-
 // 특정 숫자를 특정 위치에 놓을 수 있는지 검사
 const isSafe = (board: number[][], row: number, col: number, num: number) => {
   for (let x = 0; x < SIZE; x++) {
