@@ -14,9 +14,16 @@ const config: Config = {
       },
       width: {
         '600': '37.5rem',
+        '66.67': '4.17rem'
       },
       height: {
         '600': '37.5rem',
+        '66.67': '4.17rem'
+      },
+      borderWidth: {
+        DEFAULT: '1px',
+        '0': '0',
+        '0.5': '0.5px',
       }
     },
   },
