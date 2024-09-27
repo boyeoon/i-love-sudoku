@@ -186,7 +186,23 @@ export default function Sudoku() {
                                   .filter(n => n === cell).length > 1);
           
           const isUserInput = originalBoard[rowIndex][colIndex] === 0 && cell !== 0;  // 사용자가 입력한 숫자 확인
-  
+
+          // style
+          const getCellClass = () => {
+            const baseClass = 'grid-cell border-0.5 cursor-pointer caret-transparent focus:outline-none w-[4.17rem] h-[4.17rem] text-center text-lg font-bold';
+            const duplicateClass = isDuplicate 
+              ? 'bg-red-200 border-red-500 text-red-500' 
+              : 'border-gray-300 text-black';
+            const borderClass = `
+              ${rowIndex % SUBGRID_SIZE === 0 ? 'border-t-2' : ''} 
+              ${colIndex % SUBGRID_SIZE === SUBGRID_SIZE - 1 ? 'border-r-2' : ''}
+            `;
+            const backgroundClass = cell === 0
+              ? 'bg-white'
+              : (isUserInput ? 'bg-slate-200' : 'bg-white');
+            
+            return `${baseClass} ${duplicateClass} ${borderClass} ${backgroundClass} hover:bg-blue-200`;
+          };
           return (
             <input
               key={colIndex}
@@ -194,11 +210,7 @@ export default function Sudoku() {
               value={cell === 0 ? '' : cell}
               onChange={(e) => handleChange(rowIndex, colIndex, e.target.value)}
               onClick={() => setSelectedCell({ row: rowIndex, col: colIndex })}
-              className={`grid-cell border cursor-pointer caret-transparent border-black hover:border-blue-700 w-[4.17rem] h-[4.17rem] text-center text-lg ${isDuplicate ? 'border-red-500' : 'border-gray-300'} ${rowIndex % SUBGRID_SIZE === 0 && colIndex % SUBGRID_SIZE === 0 ? 'border-t-2 border-l-2' : ''} ${rowIndex % SUBGRID_SIZE === 2 ? 'border-b-2' : ''} ${colIndex % SUBGRID_SIZE === 2 ? 'border-r-2' : ''} ${cell === 0 ? 'bg-white' : (isUserInput ? 'bg-gray-300' : 'bg-white')} hover:bg-blue-500`} // hover 시 배경색 파란색
-              style={{
-                outline: 'none', // 포커스 시 outline 제거
-                color: isDuplicate ? 'red' : 'black', // 틀린 부분은 빨강, 나머지는 검정
-              }}
+              className={getCellClass()}
             />
           );
         })}
@@ -229,16 +241,23 @@ export default function Sudoku() {
   };
 
   return (
-    <div>
-      <h1 className="text-2xl mb-4">스도쿠 게임</h1>
+    <div className="flex justify-between">
+      <div>
       {renderBoard()}
-      {renderNumberButtons()}
-      <button onClick={solveCurrentPuzzle} className="m-2 px-3 py-1 border border-gray-300 rounded">
-        해결하기
-      </button>
+      </div>
+      <div className="w-16" />
+      <div className="w-80">
+        {renderNumberButtons()}
+        <div className='mt-2'>
+          <Button
+            buttonName="Solution"
+            onClick={solveCurrentPuzzle}
+          />
+        </div>
+      </div>
       {isSolved && (
         <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 border border-black z-50 text-center">
-          <h2 className="text-xl">정답입니다!</h2>
+          <h2 className="text-xl">Success</h2>
           <button onClick={handleCloseModal} className="mt-2 px-3 py-1 bg-blue-500 text-white rounded">
             새 게임 시작
           </button>
