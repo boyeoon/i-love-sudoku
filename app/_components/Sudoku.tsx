@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Button from './Button';
 import getSudokuPuzzles from '../_data/SudokuPuzzles';
+import Modal from './Modall';
 
 // 전체 보드 9x9x 크기
 const SIZE = 9;
@@ -255,15 +256,7 @@ export default function Sudoku() {
           />
         </div>
       </div>
-      {isSolved && (
-        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 border border-black z-50 text-center">
-          <h2 className="text-xl">Success</h2>
-          <button onClick={handleCloseModal} className="mt-2 px-3 py-1 bg-blue-500 text-white rounded">
-            새 게임 시작
-          </button>
-        </div>
-      )}
-      {isSolved && <div className="fixed inset-0 bg-black opacity-50 z-40" />}
+      {isSolved && <Modal isVisible={isSolved} onClose={handleCloseModal} />}
     </div>
   );
 }
