@@ -169,7 +169,10 @@ export default function Sudoku() {
                                   .flat().slice(Math.floor(colIndex / SUBGRID_SIZE) * SUBGRID_SIZE, Math.floor(colIndex / SUBGRID_SIZE) * SUBGRID_SIZE + SUBGRID_SIZE)
                                   .filter(n => n === cell).length > 1);
           
-          const isUserInput = originalBoard[rowIndex][colIndex] === 0 && cell !== 0;  // 사용자가 입력한 숫자 확인
+          // 사용자가 입력한 숫자 확인
+          const isUserInput = originalBoard[rowIndex][colIndex] === 0 && cell !== 0;
+          // 선택된 셀 확인
+          const isSelected = selectedCell && selectedCell.row === rowIndex && selectedCell.col === colIndex;
 
           // style
           const getCellClass = () => {
@@ -184,8 +187,10 @@ export default function Sudoku() {
             const backgroundClass = cell === 0
               ? 'bg-white'
               : (isUserInput ? 'bg-slate-200' : 'bg-white');
+
+            const selectedClass = isSelected ? 'bg-blue-200' : '';
             
-            return `${baseClass} ${duplicateClass} ${borderClass} ${backgroundClass} hover:bg-blue-200`;
+            return `${baseClass} ${duplicateClass} ${borderClass} ${backgroundClass} ${selectedClass} hover:bg-blue-200`;
           };
           return (
             <input
