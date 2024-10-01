@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import Button from './Button';
 import getSudokuPuzzles from '../_data/SudokuPuzzles';
-import Modal from './Modall';
+import Button from './Button';
+import Modal from './Modal';
+import About from './About';
 
 // 전체 보드 9x9x 크기
 const SIZE = 9;
@@ -230,7 +231,7 @@ export default function Sudoku() {
   return (
     <div className="flex justify-between">
       <div>
-      {renderBoard()}
+        {renderBoard()}
       </div>
       <div className="w-16" />
       <div className="w-80">
@@ -241,6 +242,7 @@ export default function Sudoku() {
             onClick={solveCurrentPuzzle}
           />
         </div>
+      <About />
       </div>
       {isSolved && <Modal isVisible={isSolved} onClose={handleCloseModal} />}
     </div>

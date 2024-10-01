@@ -22,12 +22,6 @@ export default function Home() {
         {/* <DropdownButton menuName="내 메뉴" options={['옵션 1', '옵션 2', '옵션 3']} /> */}
         <div className="">
           <Sudoku />
-          {/* <div className="content-between grid w-80">
-            <p>
-              <span className="block text-2xl font-bold">About</span>
-              <span>This app is one of my side projects. You can view the source code here on <a className="font-bold underline underline-offset-1" href="https://github.com/BoYeonJang/i-love-sudoku" target="_blank">GitHub</a>. Created by Boyeon Jang</span>
-            </p>
-          </div> */}
         </div>
       </main>
       <footer className="px-24 py-8">
