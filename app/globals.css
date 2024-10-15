@@ -14,6 +14,20 @@
   }
 } */
 
+/* @font-face {
+  font-family: "intelone-mono-font-family-regular";
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'MonoplexKRNerd-Bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-nerd@1.0/MonoplexKRNerd-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   --background: #282839;
   --foreground: #ededed;
@@ -22,7 +36,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "MonoplexKRNerd-Bold";
 }
 
 @layer utilities {
