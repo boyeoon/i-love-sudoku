@@ -1,5 +1,5 @@
 // import Image from "next/image";
-import Sudoku from "./_components/Sudoku";
+import Sudoku from "./components/Sudoku";
 // import DropdownButton from "./_components/dropdownButton"
 // import Button from "./_components/Button"
 

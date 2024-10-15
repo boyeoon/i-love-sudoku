@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import getSudokuPuzzles from '../_data/SudokuPuzzles';
+import getSudokuPuzzles from '../data/SudokuPuzzles';
 import Button from './Button';
 import Modal from './Modal';
 import About from './About';
