@@ -24,7 +24,10 @@ const config: Config = {
         DEFAULT: '1px',
         '0': '0',
         '0.5': '0.5px',
-      }
+      },
+      fontFamily: {
+        ubuntu: ["var(--font-ubuntu)"],
+      },
     },
   },
   plugins: [],

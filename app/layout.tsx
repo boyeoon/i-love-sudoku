@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
+import { Ubuntu } from "next/font/google";
 import "./globals.css";
+
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-ubuntu",
+})
 
 export const metadata: Metadata = {
   title: "I LOVE SUDOKU",
@@ -12,10 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
+    <html lang="en" className={`${ubuntu.variable}`}>
+      <body className="font-ubuntu">{children}</body>
     </html>
   );
 }
