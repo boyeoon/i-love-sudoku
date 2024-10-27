@@ -11,7 +11,6 @@ const ubuntu = Ubuntu({
 
 export const metadata: Metadata = {
   title: "I LOVE SUDOKU",
-  description: "My Sudoku Side Project",
 };
 
 export default function RootLayout({
