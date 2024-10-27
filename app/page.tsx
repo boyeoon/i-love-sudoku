@@ -24,8 +24,6 @@ export default function Home() {
           <Sudoku />
         </div>
       </main>
-      <footer className="px-24 py-8">
-      </footer>
     </div>
   );
 }
