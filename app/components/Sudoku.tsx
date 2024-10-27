@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import getSudokuPuzzles from '../data/SudokuPuzzles';
-import Button from './Button';
-import Modal from './Modal';
-import About from './About';
+import { useState, useEffect } from "react";
+import getSudokuPuzzles from "../data/SudokuPuzzles";
+import Button from "./Button";
+import Modal from "./Modal";
+import Footer from "./Footer";
 
-// 전체 보드 9x9x 크기
+// 전체 보드 9x9 크기
 const SIZE = 9;
 // 서브 그리드의 3x3 크기
 const SUBGRID_SIZE = 3;
@@ -120,7 +120,7 @@ export default function Sudoku() {
     const newBoard = board.map((r) => [...r]);
     
     // 빈 문자열일 경우 0으로 설정
-    if (value === '') {
+    if (value === "") {
       // 입력한 숫자가 0일 경우에만 해당 셀의 값을 0으로 설정
       if (originalBoard[row][col] === 0) {
         newBoard[row][col] = 0;
@@ -176,19 +176,19 @@ export default function Sudoku() {
 
           // style
           const getCellClass = () => {
-            const baseClass = 'grid-cell border-0.5 cursor-pointer caret-transparent focus:outline-none w-[4.17rem] h-[4.17rem] text-center text-lg font-bold';
+            const baseClass = "grid-cell border-0.5 cursor-pointer caret-transparent focus:outline-none w-[4.17rem] h-[4.17rem] text-center text-lg font-bold";
             const duplicateClass = isDuplicate 
-              ? 'bg-red-200 border-red-500 text-red-500' 
-              : 'border-gray-300 text-black';
+              ? "bg-red-200 border-red-500 text-red-500" 
+              : "border-gray-300 text-black";
             const borderClass = `
-              ${rowIndex % SUBGRID_SIZE === 0 ? 'border-t-2' : ''} 
-              ${colIndex % SUBGRID_SIZE === SUBGRID_SIZE - 1 ? 'border-r-2' : ''}
+              ${rowIndex % SUBGRID_SIZE === 0 ? "border-t-2" : ""} 
+              ${colIndex % SUBGRID_SIZE === SUBGRID_SIZE - 1 ? "border-r-2" : ""}
             `;
             const backgroundClass = cell === 0
-              ? 'bg-white'
-              : (isUserInput ? 'bg-slate-200' : 'bg-white');
+              ? "bg-white"
+              : (isUserInput ? "bg-slate-200" : "bg-white");
 
-            const selectedClass = isSelected ? 'bg-blue-200' : '';
+            const selectedClass = isSelected ? "bg-blue-200" : "";
             
             return `${baseClass} ${duplicateClass} ${borderClass} ${backgroundClass} ${selectedClass} hover:bg-blue-200`;
           };
@@ -196,7 +196,7 @@ export default function Sudoku() {
             <input
               key={colIndex}
               type="text"
-              value={cell === 0 ? '' : cell}
+              value={cell === 0 ? "" : cell}
               onChange={(e) => handleChange(rowIndex, colIndex, e.target.value)}
               onClick={() => setSelectedCell({ row: rowIndex, col: colIndex })}
               className={getCellClass()}
@@ -241,13 +241,13 @@ export default function Sudoku() {
       <div className="w-16" />
       <div className="w-80">
         {renderNumberButtons()}
-        <div className='mt-2'>
+        <div className="mt-2">
           <Button
             buttonName="Solution"
             onClick={solveCurrentPuzzle}
           />
         </div>
-      <About />
+        <Footer />
       </div>
       {isSolved && <Modal isVisible={isSolved} onClose={handleCloseModal} />}
     </div>
