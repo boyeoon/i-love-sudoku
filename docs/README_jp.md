@@ -2,7 +2,7 @@
 
 ![main-page](https://i.imgur.com/gVEnRCD.png)
 
-このウェブサイトは現在 [i-love-sudoku](http://i-love-sudoku.vercel.app) でホスティングされています。
+このウェブサイトは現在 [**i-love-sudoku**](http://i-love-sudoku.vercel.app) でホスティングされています。
 
 このアプリは、スドクゲームを実装したサイドプロジェクトで、すべてのスキルレベルのユーザーに魅力的な体験を提供するように設計されています。ユーザーがスドクパズルを解決し、解答を見つける手助けをします。
 

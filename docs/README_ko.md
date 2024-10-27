@@ -2,7 +2,7 @@
 
 ![main-page](https://i.imgur.com/gVEnRCD.png)
 
-이 웹사이트는 현재 [i-love-sudoku](http://i-love-sudoku.vercel.app)에서 호스팅되고 있습니다.
+이 웹사이트는 현재 [**i-love-sudoku**](http://i-love-sudoku.vercel.app)에서 호스팅되고 있습니다.
 
 이 앱은 스도쿠 게임을 구현한 사이드 프로젝트로, 모든 수준의 사용자에게 매력적인 경험을 제공하기 위해 설계되었습니다. 사용자가 스도쿠 퍼즐을 해결하고 해답을 발견할 수 있도록 돕습니다.
 
