@@ -1,6 +1,6 @@
 # I LOVE SUDOKU
 
-![main-page](https://i.imgur.com/gVEnRCD.png)
+![main-page](https://i.imgur.com/izazpAU.png)
 
 このウェブサイトは現在 [**i-love-sudoku**](http://i-love-sudoku.vercel.app) でホスティングされています。
 

@@ -1,6 +1,6 @@
 # I LOVE SUDOKU
 
-![main-page](https://i.imgur.com/gVEnRCD.png)
+![main-page](https://i.imgur.com/izazpAU.png)
 
 The website is currently hosted at [**i-love-sudoku**](http://i-love-sudoku.vercel.app).
 

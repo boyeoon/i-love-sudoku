@@ -1,6 +1,6 @@
 # I LOVE SUDOKU
 
-![main-page](https://i.imgur.com/gVEnRCD.png)
+![main-page](https://i.imgur.com/izazpAU.png)
 
 이 웹사이트는 현재 [**i-love-sudoku**](http://i-love-sudoku.vercel.app)에서 호스팅되고 있습니다.
 
