@@ -11,9 +11,6 @@ This app is a side project that implements a Sudoku game, designed to provide an
 - **Number Buttons**: Easily select numbers using the provided buttons.
 - **Solution Assistance**: If you encounter difficulties while solving, press the solution button for guidance.
 
-
-Got it! Here’s a "How to Use" section tailored to your requirements:
-
 ## How to Use
 1. **Select a Number**: Click on any of the number buttons (1-9) to input that number into the selected Sudoku cell.
 2. **Click on a Cell**: Click on any empty cell in the Sudoku grid to select it. This allows you to input a number into that specific cell.
