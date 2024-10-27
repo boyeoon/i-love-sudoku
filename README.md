@@ -2,7 +2,7 @@
 
 ![main-page](https://i.imgur.com/gVEnRCD.png)
 
-The website is currently hosted at [i-love-sudoku](http://i-love-sudoku.vercel.app).
+The website is currently hosted at [**i-love-sudoku**](http://i-love-sudoku.vercel.app).
 
 This app is a side project that implements a Sudoku game, designed to provide an engaging experience for users of all skill levels. It helps users solve Sudoku puzzles and discover solutions.
 
