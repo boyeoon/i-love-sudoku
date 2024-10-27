@@ -1,14 +1,10 @@
 # I LOVE SUDOKU
 
-![main-page](https://i.imgur.com/21HWeRd.png)
+![main-page](https://i.imgur.com/gVEnRCD.png)
 
 The website is currently hosted at [i-love-sudoku](http://i-love-sudoku.vercel.app).
 
 This app is a side project that implements a Sudoku game, designed to provide an engaging experience for users of all skill levels. It helps users solve Sudoku puzzles and discover solutions.
-
-<!-- This app is one of my side projects. It includes 3 questions, each with a different level of difficulty. If you encounter any difficulties while answering, you can press the solution button for assistance. -->
-
-<!-- This app is one of my side projects. I have prepared a total of 10 questions for each difficulty level: easy, medium, and hard. Currently, it supports three languages: English, Korean, and Japanese. -->
 
 ## Features
 - **Sudoku Board**: A playable Sudoku board where you can fill in the numbers.
@@ -38,7 +34,8 @@ Got it! Here’s a "How to Use" section tailored to your requirements:
 │   ├── /components
 │   │   ├── Sudoku.tsx
 │   │   ├── Button.tsx
-│   │   └── Modal.tsx
+│   │   ├── Modal.tsx
+│   │   └── ...
 │   ├── /data
 │   │   └── SudokuPuzzles.ts
 │   ├── layout.tsx
