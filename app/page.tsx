@@ -13,7 +13,7 @@ export default function Home() {
         {/* <button className="bg-[#255AB4] px-4 py-2.5 rounded-md">Level</button> */}
         {/* <button className="bg-[#255AB4] px-4 py-2.5 rounded-md">Language</button> */}
       </header>
-      <main className="flex justify-center mt-10">
+      <main className="flex justify-center my-10">
         {/* top */}
         {/* <div className="flex items-end justify-between my-3.5">
           <a>Easy 01</a>
