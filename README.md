@@ -6,6 +6,10 @@ The website is currently hosted at [i-love-sudoku](http://i-love-sudoku.vercel.a
 
 This app is a side project that implements a Sudoku game, designed to provide an engaging experience for users of all skill levels. It helps users solve Sudoku puzzles and discover solutions.
 
+|   |   |   |
+|---|---|---|
+|[**English**](/README.md)|[**Korean**](/docs/README_ko.md)|[**Japanese**](/docs/README_jp.md)|
+
 ## Features
 - **Sudoku Board**: A playable Sudoku board where you can fill in the numbers.
 - **Number Buttons**: Easily select numbers using the provided buttons.
