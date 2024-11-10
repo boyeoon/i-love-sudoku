@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import getSudokuPuzzles from "@/data/sudokuPuzzles";
-import Button from "@/components/button";
+import Button from "@/components/buttons/button";
 import Modal from "@/components/modal";
-import Footer from "@/components/footer";
+import Footer from "@/components/footer/footer";
 
 // 전체 보드 9x9 크기
 const SIZE = 9;
@@ -204,15 +204,15 @@ export default function Sudoku() {
             selectedCell.row === rowIndex &&
             selectedCell.col === colIndex;
 
-          // style
+          // 반응형 그리드 및 애니메이션 추가
           const getCellClass = () => {
             const baseClass =
-              "grid-cell border-0.5 cursor-pointer caret-transparent focus:outline-none w-[4.17rem] h-[4.17rem] text-center text-lg font-bold";
+              "grid-cell border-0.5 cursor-pointer caret-transparent focus:outline-none w-[4.17rem] h-[4.17rem] text-center text-lg font-bold transition-all";
             const duplicateClass = isDuplicate
               ? "bg-red-200 border-red-500 text-red-500"
               : "border-gray-300 text-black";
             const borderClass = `
-              ${rowIndex % SUBGRID_SIZE === 0 ? "border-t-2" : ""} 
+              ${rowIndex % SUBGRID_SIZE === 0 ? "border-t-2" : ""}
               ${
                 colIndex % SUBGRID_SIZE === SUBGRID_SIZE - 1 ? "border-r-2" : ""
               }
@@ -226,8 +226,9 @@ export default function Sudoku() {
 
             const selectedClass = isSelected ? "bg-blue-200" : "";
 
-            return `${baseClass} ${duplicateClass} ${borderClass} ${backgroundClass} ${selectedClass} hover:bg-blue-200`;
+            return `${baseClass} ${duplicateClass} ${borderClass} ${backgroundClass} ${selectedClass} hover:bg-blue-200 transition-colors`;
           };
+
           return (
             <input
               key={colIndex}
