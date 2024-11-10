@@ -13,17 +13,17 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       width: {
-        '600': '37.5rem',
-        '66.67': '4.17rem'
+        "600": "37.5rem",
+        "66.67": "4.17rem",
       },
       height: {
-        '600': '37.5rem',
-        '66.67': '4.17rem'
+        "600": "37.5rem",
+        "66.67": "4.17rem",
       },
       borderWidth: {
-        DEFAULT: '1px',
-        '0': '0',
-        '0.5': '0.5px',
+        DEFAULT: "1px",
+        "0": "0",
+        "0.5": "0.5px",
       },
       fontFamily: {
         ubuntu: ["var(--font-ubuntu)"],
