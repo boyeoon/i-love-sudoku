@@ -1,13 +1,16 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import { useState } from "react";
 
 interface DropdownButtonProps {
   menuName: string;
   options: string[];
 }
 
-export default function DropdownButton({ menuName, options }: DropdownButtonProps) {
+export default function DropdownButton({
+  menuName,
+  options,
+}: DropdownButtonProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
