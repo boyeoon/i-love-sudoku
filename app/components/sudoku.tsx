@@ -131,21 +131,17 @@ export default function Sudoku() {
   const handleChange = (row: number, col: number, value: string) => {
     const newBoard = board.map((r) => [...r]);
 
-    // 빈 문자열일 경우 0으로 설정
-    if (value === "") {
-      // 입력한 숫자가 0일 경우에만 해당 셀의 값을 0으로 설정
-      if (originalBoard[row][col] === 0) {
-        newBoard[row][col] = 0;
+    // 입력 값이 숫자 1~9 이외일 경우 처리
+    const num = parseInt(value);
+    if (value === "" || (num >= 1 && num <= 9)) {
+      if (originalBoard[row][col] === 0 || num === 0) {
+        newBoard[row][col] = num || 0;
       }
+      setBoard(newBoard);
+      checkIfSolved(newBoard);
     } else {
-      const num = Number(value);
-      if (num >= 1 && num <= 9) {
-        newBoard[row][col] = num;
-      }
+      alert("입력 값은 1부터 9 사이의 숫자여야 합니다.");
     }
-
-    setBoard(newBoard);
-    checkIfSolved(newBoard);
   };
 
   const handleNumberClick = (num: number) => {
