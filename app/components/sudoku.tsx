@@ -140,7 +140,7 @@ export default function Sudoku() {
       setBoard(newBoard);
       checkIfSolved(newBoard);
     } else {
-      alert("입력 값은 1부터 9 사이의 숫자여야 합니다.");
+      alert("The input value must be a number between 1 and 9.");
     }
   };
 
