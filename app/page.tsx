@@ -1,5 +1,5 @@
 import Sudoku from "@/components/sudoku";
-import Header from "@/components/header";
+import Header from "@/components/header/header";
 // import DropdownButton from "./_components/dropdownButton"
 // import Button from "./_components/Button"
 
