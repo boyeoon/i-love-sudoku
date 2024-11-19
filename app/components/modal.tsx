@@ -1,4 +1,5 @@
 import Button from "@/components/buttons/button";
+import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
 
 interface ModalProps {
   isVisible: boolean;
@@ -15,6 +16,7 @@ export default function Modal({ isVisible, onClose }: ModalProps) {
         <Button onClick={onClose} buttonName="New game" />
       </div>
       <div className="fixed inset-0 bg-black opacity-50 z-40" />
+      <Fireworks autorun={{ speed: 3 }} />
     </div>
   );
 }
